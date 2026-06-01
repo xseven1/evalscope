@@ -1,3 +1,5 @@
+> **Fork note:** Pruner extension developed against commit `e9d42d8` (2026-05-31).
+
 <p align="center">
     <br>
     <img src="docs/en/_static/images/evalscope_logo.png"/>
