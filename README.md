@@ -1,4 +1,5 @@
-> **Fork note:** Pruner extension developed against commit `e9d42d8` (2026-05-31).
+## ⚠️ Fork Note
+> Pruner extension developed against evalscope commit: **`e9d42d8`** (2026-05-31)
 
 <p align="center">
     <br>
