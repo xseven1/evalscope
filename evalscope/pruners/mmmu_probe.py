@@ -170,9 +170,7 @@ class MMUAblationProbe:
             kwargs['base_url'] = api_base
         self.client = OpenAI(**kwargs)
 
-    # ------------------------------------------------------------------
     # HuggingFace dataset loading
-    # ------------------------------------------------------------------
 
     def _load_hf_sample(self, subject: str, local_idx: int) -> Optional[Dict[str, Any]]:
         """Load a single MMMU sample from HuggingFace by subject and local index."""
@@ -197,9 +195,7 @@ class MMUAblationProbe:
                 print(f'  Warning: could not load {subject}[{local_idx}]: {e}', file=sys.stderr)
             return None
 
-    # ------------------------------------------------------------------
     # API calls
-    # ------------------------------------------------------------------
 
     def _call(self, messages: List[Dict[str, Any]]) -> Optional[str]:
         """Call the chat API with retry logic."""
@@ -233,9 +229,7 @@ class MMUAblationProbe:
         content.append({'type': 'text', 'text': MCQ_PROMPT.format(question=question)})
         return [{'role': 'user', 'content': content}]
 
-    # ------------------------------------------------------------------
     # Per-sample probe
-    # ------------------------------------------------------------------
 
     def _probe_sample(
         self, subject: str, local_idx: int
@@ -299,9 +293,7 @@ class MMUAblationProbe:
             'n_images':       n_images,
         }
 
-    # ------------------------------------------------------------------
     # Public API
-    # ------------------------------------------------------------------
 
     def run(
         self,
